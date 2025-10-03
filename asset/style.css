@@ -71,6 +71,10 @@
 .Statement-of-Work-Image img {
   border-radius: 10px;
   justify-self: end;
+  width: 100%;
+  height: auto;
+  max-height: 350px; 
+  object-fit: cover; 
 }
 
 /* Why Choose */

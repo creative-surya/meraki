@@ -68,6 +68,7 @@
 .Statement-of-Work-Text h1{
     font-size: 3rem;
 }
+
 .Statement-of-Work-Image img {
   border-radius: 10px;
   justify-self: end;
@@ -75,7 +76,17 @@
   height: auto;
   max-height: 350px; 
   object-fit: cover; 
+  height: auto;       
+  max-width: 70%;     
+  display: block;     
+  margin-right: auto; 
+  transition: transform 0.5s ease;
 }
+
+.Statement-of-Work-Image img:hover {
+  transform: scale(1.05); 
+}
+
 
 /* Why Choose */
 .Statement-of-Work-WhyChoose {
@@ -478,4 +489,17 @@
 .swiper-slide {
     display: flex;
     justify-content: center;
+}
+/* ------------Nearshore Image css----------- */
+.Nearshore-Image img {
+  border-radius: 10px;
+  width: 90%;       
+  height: auto;    
+  display: block;
+  margin: 0 auto;   
+  transition: transform 0.5s ease; 
+}
+
+.Nearshore-Image img:hover {
+  transform: scale(1.05);
 }

@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diversity & Inclusion</title>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+    <link rel="stylesheet" href="/asset/style.css">
+
+    <style>
+        /* ===================
+   Hero Section
+=================== */
+        .hero-section {
+            height: 70vh;
+            background: linear-gradient(135deg, #e0a0fc 0%, #4e54c8 100%);
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -150px;
+            left: -150px;
+            width: 400px;
+            height: 400px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            animation: floatCircle 6s infinite ease-in-out alternate;
+        }
+
+        .hero-section::after {
+            content: '';
+            position: absolute;
+            bottom: -150px;
+            right: -150px;
+            width: 350px;
+            height: 350px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 50%;
+            animation: floatCircle 8s infinite ease-in-out alternate-reverse;
+        }
+
+        @keyframes floatCircle {
+            0% {
+                transform: translateY(0) translateX(0);
+            }
+
+            100% {
+                transform: translateY(40px) translateX(40px);
+            }
+        }
+
+        .hero-title {
+            font-size: 3.2rem;
+            font-weight: 700;
+            line-height: 1.2;
+            color: #fff;
+        }
+
+        .hero-title span {
+            color: #ffd700;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            margin: 20px 0 30px;
+            color: #e0e0e0;
+        }
+
+        .hero-btn {
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            background-color: #ffd700;
+            color: #4e54c8;
+            border: none;
+            transition: all 0.3s ease;
+        }
+
+        .hero-btn:hover {
+            background-color: #ffcd38;
+            transform: translateY(-2px);
+        }
+
+        .hero-image {
+            max-width: 80%;
+            animation: floatImage 4s ease-in-out infinite alternate;
+        }
+
+        @keyframes floatImage {
+            0% {
+                transform: translateY(0px);
+            }
+
+            100% {
+                transform: translateY(-20px);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-section {
+                text-align: center;
+                height: auto;
+                padding: 100px 0;
+            }
+
+            .hero-title {
+                font-size: 2.5rem;
+            }
+
+            .hero-image {
+                max-width: 70%;
+                margin-top: 30px;
+            }
+        }
+
+        /* ===== BREADCRUMB ===== */
+        .breadcrumb {
+            background: transparent;
+            justify-content: center;
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .breadcrumb-item a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: #a3561b;
+        }
+
+        /* ===== CONTENT SECTION ===== */
+        .content-section {
+            padding: 80px 0;
+        }
+
+        .content-section h2 {
+            font-weight: 700;
+            font-size: 36px;
+            margin-bottom: 30px;
+        }
+
+        .content-section p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .content-section img {
+            border-radius: 12px;
+            width: 100%;
+            height: auto;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease;
+        }
+
+        .content-section img:hover {
+            transform: scale(1.03);
+        }
+
+        /* ===== PROGRAM SECTION ===== */
+        .program-section {
+            padding: 80px 0;
+            background-color: #faf9ff;
+        }
+
+        .program-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            background: #fff;
+        }
+
+        .program-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .program-card:hover img {
+            transform: scale(1.06);
+        }
+
+        .program-card-body {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .program-card-body h5 {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: #343a40;
+        }
+
+        .program-card-body p {
+            font-size: 0.95rem;
+            color: #6c757d;
+            line-height: 1.6;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-weight: 700;
+            font-size: 2.5rem;
+            color: #222;
+        }
+
+        .section-title p {
+            font-size: 1rem;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 10px auto 0;
+        }
+
+        /* ===== EMPOWERING SECTION ===== */
+        .empowering-section .container-fluid {
+            background-color: #9d00ff;
+            padding: 60px 20px;
+        }
+
+        .empowering-section h1 {
+            font-weight: 700;
+            font-size: 2.8rem;
+        }
+
+        .contactus-button {
+            background-color: white;
+            border-radius: 25px;
+            color: #9d00ff;
+            font-weight: 600;
+            padding: 10px 30px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .contactus-button:hover {
+            background-color: #f0e8ff;
+            color: #7d00d6;
+        }
+        /* Testimonial Card Styles */
+.testimonial-wrap {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.testimonial-item {
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+/* Hover Effect */
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+/* Profile Image */
+.testimonial-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 4px solid #4CAF50; /* Optional colored border */
+}
+
+/* Name & Title */
+.testimonial-item h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.testimonial-item h4 {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+/* Stars */
+.testimonial-item .stars {
+    color: #FFD700; /* Gold stars */
+    margin-bottom: 15px;
+    font-size: 1rem;
+}
+
+/* Quote Text */
+.testimonial-item p {
+    font-style: italic;
+    color: #555;
+    line-height: 1.5;
+    position: relative;
+}
+
+/* Quote Icons */
+.testimonial-item .quote-icon-left,
+.testimonial-item .quote-icon-right {
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+.testimonial-item .quote-icon-left {
+    position: absolute;
+    left: -10px;
+    top: -10px;
+}
+
+.testimonial-item .quote-icon-right {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+}
+
+/* Swiper Slide Centering */
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HERO SECTION ===== -->
+    <!-- <section class="hero-section">
+    <div class="container" data-aos="fade-down" data-aos-duration="1000">
+      <h1>Diversity & Inclusion</h1>
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="#">About Us</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Diversity & Inclusion</li>
+        </ol>
+      </nav>
+    </div>
+  </section> -->
+    <!-- Hero Section -->
+    <section class="hero-section d-flex align-items-center">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Content -->
+                <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1200">
+                    <h1 class="hero-title">
+                        Empowering <span>Innovation</span> for a Better Future
+                    </h1>
+                    <p class="hero-subtitle">
+                        Join us in shaping the next generation of technology and solutions. Together we make an impact.
+                    </p>
+                    <a href="#programs" class="btn btn-primary btn-lg hero-btn">Get Started</a>
+                </div>
+
+                <!-- Animated Image -->
+                <div class="col-lg-6 text-center" data-aos="zoom-in" data-aos-duration="1200">
+                    <img src="https://www.nnavik.com/assets/img/all-images/diversity/disability.jpg" alt="Innovation"
+                        class="hero-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== CONTENT SECTION ===== -->
+    <section class="content-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Text Content -->
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1200">
+                    <h2>Our Commitment to True Diversity & Inclusion</h2>
+                    <p>
+                        At NNavik, we believe diversity and inclusion go hand-in-hand with
+                        innovation and collaboration. Our goal is not just to reflect diversity
+                        in numbers, but to create an environment where every voice is heard,
+                        valued, and empowered to contribute to meaningful impact.
+                    </p>
+                </div>
+
+                <!-- Image -->
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="1200">
+                    <img src="https://www.nnavik.com/assets/img/all-images/diversity-and-inclusion.jpg"
+                        alt="Diversity & Inclusion Team" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROGRAM SECTION ===== -->
+    <section class="program-section">
+        <div class="container">
+            <!-- Section Heading -->
+            <div class="section-title" data-aos="fade-up" data-aos-duration="1000">
+                <h2>Our Inclusion Programs</h2>
+                <p>We are committed to building a culture where everyone feels valued, respected, and supported through
+                    focused programs.</p>
+            </div>
+
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="card program-card">
+                        <img src="https://www.nnavik.com/assets/img/all-images/diversity/disability.jpg"
+                            alt="Disability Inclusion">
+                        <div class="program-card-body">
+                            <h5>Disability Inclusion</h5>
+                            <p>Ensures candidates and employees with disabilities have access, support, and equal
+                                opportunity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="card program-card">
+                        <img src="https://www.nnavik.com/assets/img/all-images/diversity/veteran.jpg"
+                            alt="Veteran Hiring">
+                        <div class="program-card-body">
+                            <h5>Veteran Hiring</h5>
+                            <p>Provides pathways and tailored support for veterans transitioning into civilian roles.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Card 3 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="card program-card">
+                        <img src="https://www.nnavik.com/assets/img/all-images/diversity/disability.jpg"
+                            alt="Ethnic Minority Hiring">
+                        <div class="program-card-body">
+                            <h5>Ethnic Minority Hiring</h5>
+                            <p>Promoting opportunities for candidates from diverse ethnic backgrounds to thrive and
+                                lead.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="card program-card">
+                        <img src="https://www.nnavik.com/assets/img/all-images/diversity/veteran.jpg"
+                            alt="Women in Leadership">
+                        <div class="program-card-body">
+                            <h5>Women in Leadership</h5>
+                            <p>Empowering women with resources and opportunities to step into leadership roles
+                                confidently.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="testimonials" class="testimonials section light-background">
+
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+            <h2>Testimonials</h2>
+            <p>Hear what our clients have to say about working with Trivexa System and how our solutions have helped
+                transform their businesses.</p>
+        </div>
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper init-swiper">
+                <script type="application/json" class="swiper-config">
+        {
+          "loop": true,
+          "speed": 600,
+          "autoplay": { "delay": 5000 },
+          "slidesPerView": "auto",
+          "pagination": {
+            "el": ".swiper-pagination",
+            "type": "bullets",
+            "clickable": true
+          },
+          "breakpoints": {
+            "320": { "slidesPerView": 1, "spaceBetween": 40 },
+            "1200": { "slidesPerView": 2, "spaceBetween": 20 }
+          }
+        }
+      </script>
+
+                <div class="swiper-wrapper">
+
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/32.jpg" class="testimonial-img"
+                                    alt="Nilesh Khade">
+                                <h3>Nilesh Khade</h3>
+                                <h4>CEO &amp; Founder</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Working with Trivexa System was a game-changer. Their team delivered
+                                        innovative solutions ahead of schedule and exceeded our expectations in both
+                                        quality and performance.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/women/44.jpg" class="testimonial-img"
+                                    alt="Alaka Khade">
+                                <h3>Alaka Khade</h3>
+                                <h4>Director</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>The team delivered a highly scalable platform tailored to our unique business
+                                        needs. Their communication, creativity, and technical skills were exceptional
+                                        throughout the project.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 3 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/56.jpg" class="testimonial-img"
+                                    alt="Pravin Darade">
+                                <h3>Pravin Darade</h3>
+                                <h4>Designer Head</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>They truly understand user experience. The interface designs were sleek,
+                                        intuitive, and matched our brand perfectly. Highly recommended for any creative
+                                        business.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 4 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/72.jpg" class="testimonial-img"
+                                    alt="Shubham Darade">
+                                <h3>Shubham Darade</h3>
+                                <h4>Technical Head</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Their team delivered robust backend architecture and seamless API
+                                        integrations, enabling our tech stack to scale effortlessly. Highly dependable
+                                        and technically sound professionals.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 5 -->
+                    <div class="swiper-slide">
+                        <div class="testimonial-wrap">
+                            <div class="testimonial-item">
+                                <img src="https://randomuser.me/api/portraits/men/85.jpg" class="testimonial-img"
+                                    alt="Onkar Nagargoje">
+                                <h3>Onkar Nagargoje</h3>
+                                <h4>Manager</h4>
+                                <div class="stars">
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                </div>
+                                <p>
+                                    <i class="bi bi-quote quote-icon-left"></i>
+                                    <span>Trivexa helped us streamline our project workflows and improve team
+                                        collaboration. Their clear communication and timely delivery made project
+                                        management much smoother.</span>
+                                    <i class="bi bi-quote quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Swiper Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <script>
+        document.querySelectorAll('.init-swiper').forEach(function (swiperEl) {
+            const config = JSON.parse(swiperEl.querySelector('.swiper-config').textContent);
+            new Swiper(swiperEl, config);
+        });
+    </script>
+
+
+    <!-- ===== EMPOWERING SECTION ===== -->
+    <section class="empowering-section mb-5">
+        <div class="container-fluid text-center text-white">
+            <h1 data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Empowering every voice.
+            </h1>
+            <h4 class="text-white" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="500"
+                data-aos-duration="500">Building a culture of belonging</h4>
+            <button class="btn contactus-button mt-3">Contact Us</button>
+        </div>
+    </section>
+
+    <!-- JS Libraries -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            offset: 120,
+            duration: 1000,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+</body>
+
+</html>
